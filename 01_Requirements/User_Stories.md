@@ -1,7 +1,6 @@
 # User Stories (เรื่องราวผู้ใช้งาน)
 **Project:** Real-time Collaborative To-Do List
 
-เอกสารนี้รวบรวมความต้องการของผู้ใช้งานในรูปแบบ User Stories โดยอ้างอิงจากฟังก์ชันการทำงานจริงของระบบ (Source Code)
 
 ---
 
