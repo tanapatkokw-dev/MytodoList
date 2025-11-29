@@ -55,3 +55,39 @@
   "createdBy": "String",          // ชื่อผู้สร้าง (จาก User Input)
   "createdAt": Number             // Timestamp (Date.now())
 }
+
+---
+
+## 4. ความต้องการที่ไม่ใช่ฟังก์ชัน (Non-Functional Requirements)
+* **Performance:** การรับส่งข้อมูลต้องมีความหน่วงต่ำ (Low Latency) ผ่าน WebSocket เพื่อให้ผู้ใช้รู้สึกถึงความเป็น Real-time
+* **Usability:**
+    * มีการใช้ **Visual Cues** (สีและไอคอน) เพื่อบ่งบอกสถานะงานที่ชัดเจน (เทา/ส้ม/เขียว)
+    * รองรับการใช้งาน **Responsive** เบื้องต้นผ่าน Tailwind CSS สามารถใช้งานได้ทั้งบน Desktop และ Mobile
+* **Persistence (Current Limitation):** ข้อมูลจะคงอยู่ตราบเท่าที่ Server ยังทำงาน (Runtime Storage) หาก Restart Server ข้อมูลจะหายไป (ตามข้อจำกัดของตัวแปร `let tasks = []`)
+
+---
+
+## 5. เทคโนโลยีที่ใช้ (Technology Stack)
+อ้างอิงจาก `package.json` และไฟล์ประกอบในโปรเจกต์:
+
+### **Frontend (ส่วนแสดงผล)**
+* **React.js:** Library หลักสำหรับสร้าง User Interface และจัดการ State
+* **Tailwind CSS:** Framework สำหรับตกแต่งหน้าตา (Styling) ผ่าน CDN
+* **Custom CSS:** ไฟล์ `index.css` สำหรับกำหนดสีธีมตามสถานะ (State-based Styling)
+* **Socket.io-client:** Library สำหรับเชื่อมต่อ Real-time communication กับ Server
+
+### **Backend (ส่วนประมวลผล)**
+* **Node.js:** Runtime Environment สำหรับรัน Server
+* **Express.js:** Web Framework สำหรับจัดการ Routing
+* **Socket.io:** Library หลักสำหรับจัดการ WebSocket Server
+* **UUID:** Utility สำหรับสร้าง ID งานที่ไม่ซ้ำกัน (Unique ID Generation)
+
+---
+
+## 6. สิ่งที่อยู่นอกขอบเขต (Out of Scope / Future Work)
+ฟังก์ชันเหล่านี้ **ไม่รวม** อยู่ในเวอร์ชันปัจจุบัน (MVP) แต่มีแผนพัฒนาในอนาคต:
+
+* **Persistent Database:** ยังไม่มีการบันทึกลงฐานข้อมูลถาวร เช่น MongoDB หรือ SQL (ข้อมูลจะหายเมื่อปิดเซิร์ฟเวอร์)
+* **User Authentication:** ไม่มีระบบ Login ด้วย Password หรือการสมัครสมาชิกถาวร
+* **Due Date Notification:** ยังไม่มีระบบระบุวันกำหนดส่งและแจ้งเตือนเมื่อใกล้ถึงเวลา
+* **File Attachment:** ไม่รองรับการแนบไฟล์รูปภาพหรือเอกสารในรายการงาน
