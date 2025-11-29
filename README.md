@@ -59,7 +59,7 @@ npm install
 # เริ่มต้นระบบ
 npm start
 ```
-##วิธีเข้าใช้งาน (Usage)
+## วิธีเข้าใช้งาน (Usage)
 เมื่อรัน Server สำเร็จแล้ว
 
 เปิด Google Chrome แล้วเข้าลิงก์:
