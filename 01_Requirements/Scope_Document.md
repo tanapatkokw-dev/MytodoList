@@ -2,7 +2,6 @@
 
 **Project:** Real-time Collaborative To-Do List
 **Version:** 1.0 (Based on Current Implementation)
-**Last Updated:** 2025-11-30
 
 ---
 
