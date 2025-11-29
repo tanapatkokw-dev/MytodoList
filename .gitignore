@@ -17,3 +17,6 @@ Thumbs.db
 # Local Tools
 ngrok.exe
 ngrok
+
+desktop.ini
+*.ini
