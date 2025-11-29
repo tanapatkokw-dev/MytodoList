@@ -33,3 +33,28 @@
 ```bash
 git clone [https://github.com/tanapatkokw-dev/MytodoList.git](https://github.com/tanapatkokw-dev/MytodoList.git)
 cd MytodoList
+```
+### 2. ติดตั้งและสร้างหน้าเว็บ (Frontend Setup)
+เราต้องแปลงโค้ด React ให้พร้อมใช้งานก่อน
+
+```bash
+# เข้าไปที่โฟลเดอร์ client
+cd 04_Implementation/src/client
+
+# ติดตั้ง Library ที่จำเป็น
+npm install
+
+# สร้างไฟล์เว็บตัวจริง (Build)
+npm run build
+```
+### 3.รันเซิร์ฟเวอร์ (Backend Setup)
+เมื่อสร้างหน้าเว็บเสร็จแล้ว ให้ถอยกลับไปรัน Server
+```Bash
+# ถอยออกมาและเข้าโฟลเดอร์ server
+cd ../server
+
+# ติดตั้ง Library ที่จำเป็น
+npm install
+
+# เริ่มต้นระบบ
+npm start
