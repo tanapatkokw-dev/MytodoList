@@ -148,20 +148,21 @@ function App() {
             </div>
 
             {/* --- [จุดที่แก้ไข] เปลี่ยนปุ่มเป็นข้อความ [Edit] และ [Del] --- */}
-            <div className="flex gap-1 ml-4 font-mono text-sm">
+            <div className="flex gap-2 ml-4">
                {editingId !== task.id && (
                   <button 
                     onClick={() => startEditing(task.id, task.title)}
-                    className="text-black font-bold hover:underline"
+                    className="bg-yellow-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-yellow-600 shadow-sm transition"
                   >
-                    [Edit]
+                    Edit
                   </button>
                )}
+               
                <button 
                   onClick={() => handleDelete(task.id)}
-                  className="text-black font-bold hover:underline"
+                  className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 shadow-sm transition"
                >
-                  [Del]
+                  Delete
                </button>
             </div>
             {/* -------------------------------------------------------- */}
