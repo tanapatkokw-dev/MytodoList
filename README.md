@@ -31,8 +31,7 @@
 ### 1. ดาวน์โหลดโปรเจกต์ (Clone)
 เปิด Terminal แล้วพิมพ์คำสั่ง:
 ```bash
-git clone [https://github.com/tanapatkokw-dev/MytodoList.git](https://github.com/tanapatkokw-dev/MytodoList.git)
-cd MytodoList
+git clone https://github.com/tanapatkokw-dev/MytodoList.git
 ```
 ### 2. ติดตั้งและสร้างหน้าเว็บ (Frontend Setup)
 เราต้องแปลงโค้ด React ให้พร้อมใช้งานก่อน
