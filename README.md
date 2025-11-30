@@ -41,8 +41,7 @@
 ### 1. ดาวน์โหลดโปรเจกต์ (Clone)
 เปิด Terminal แล้วพิมพ์คำสั่ง:
 ```bash
-git clone [https://github.com/tanapatkokw-dev/MytodoList.git](https://github.com/tanapatkokw-dev/MytodoList.git)
-cd MytodoList
+git clone https://github.com/tanapatkokw-dev/MytodoList.git
 ```
 
 ### 2. ติดตั้งและเตรียมหน้าเว็บ (Frontend Setup)
