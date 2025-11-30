@@ -101,3 +101,34 @@ npm start
 - 1.กรอก ชื่อของคุณ (Acting as...) ในหน้าแรก
 - 2.กดปุ่ม "เข้าสู่ระบบ" เพื่อเริ่มใช้งาน
 - 3.(ทดสอบ Real-time): ลองเปิดลิงก์บน 2 แท็บ หรือเปิดบนมือถือและคอมพิวเตอร์พร้อมกัน จะเห็นว่าข้อมูลเชื่อมถึงกันทันที!
+
+## โครงสร้างไฟล์ (Code Structure)
+โครงสร้างไดเรกทอรีของโปรเจกต์มีการจัดระเบียบดังนี้:
+```bash
+MytodoList/
+├── README.md               # คู่มือโปรเจกต์ (ไฟล์นี้)
+├── 01_Requirements/        # เอกสาร Requirement และ User Stories
+├── 04_Implementation/      # Source Code หลักของโปรแกรม
+│   └── src/
+│       ├── server/         # Backend (Node.js + Socket.io)
+│       │   ├── index.js    # จุดเริ่มต้น Server (Entry Point)
+│       │   └── package.json
+│       │
+│       └── client/         # Frontend (React)
+│           ├── public/
+│           └── src/
+│               ├── App.js  # หน้าจอหลักและ Logic การทำงาน
+│               └── index.css
+│
+├── 05_Testing/             # เอกสาร Test Case
+└── 06_Deployment_Review/   # คู่มือการใช้งาน (User Manual)
+```
+
+## ข้อควรระวัง (Important Notes)
+- ข้อมูลชั่วคราว (Temporary Data): ข้อมูลงานทั้งหมดถูกจัดเก็บอยู่ใน RAM ของ Server (In-Memory Database) ดังนั้นหากมีการปิดหรือ Restart Server (รวมถึง Server บน Render ที่อาจ Sleep เมื่อไม่มีคนใช้) ข้อมูลทั้งหมดจะสูญหายทันที
+
+- การเชื่อมต่อ (Connection): ระบบต้องใช้อินเทอร์เน็ตในการเชื่อมต่อ Socket.io เพื่อรับส่งข้อมูล
+
+---
+
+###Developed by Tanapat Kokwan, Phuripat Rattanakarn for CS436 Project
