@@ -58,20 +58,20 @@ npm install
 npm run build
 ```
 
-## ⚠️ ขั้นตอนสำคัญ: แก้ไข Code สำหรับรัน Local
+### ⚠️ ขั้นตอนสำคัญ: แก้ไข Code สำหรับรัน Local
 ก่อนจะไปต่อ ต้องตรวจสอบไฟล์ client/src/App.js เพื่อให้เชื่อมต่อกับ Server ในเครื่องตัวเองได้ถูกต้อง:
 
-1.เปิดไฟล์ 02_Implementation/src/client/src/App.js
+1.เปิดไฟล์ 04_Implementation/src/client/src/App.js
 
 2.ค้นหาบรรทัด const socket = io();
 
-3.แก้ไขให้ชี้ไปที่ localhost:8000 (เพราะ io() เฉยๆ จะพยายามต่อไปที่ Port 3000 ของหน้าเว็บ ซึ่งผิด 
+3.แก้ไขให้ชี้ไปที่ localhost:5000 (เพราะ io() เฉยๆ จะพยายามต่อไปที่ Port 3000 ของหน้าเว็บ ซึ่งผิด):
 ```bash
-// ❌ ถ้าใช้สำหรับออนไลน์ (ปกติค่านี้ใช้กับ Production/Render)
-// const socket = io();
+// ❌ ถ้าโค้ดเดิมเป็นแบบนี้ (ปกติใช้สำหรับ Production/Render)
+// const socket = io(); 
 
-// ✅ ให้แก้เป็นบรรทัดนี้ (สำหรับรัน Local) เพื่อชี้ไปที่ Server Port 8000
-const socket = io('http://localhost:8000');
+// ✅ ให้แก้เป็นแบบนี้ (สำหรับรัน Local) เพื่อชี้ไปที่ Server Port 5000
+const socket = io('http://localhost:5000'); 
 ```
 
 ### 3. รันเซิร์ฟเวอร์ (Backend Setup)
@@ -83,7 +83,7 @@ cd ../server
 # ติดตั้ง Library ที่จำเป็น
 npm install
 
-# รันเซิร์ฟเวอร์
+# เริ่มต้นระบบ
 npm start
 ```
 ✅ เมื่อรันสำเร็จจะขึ้นข้อความ: SERVER RUNNING ON PORT 8000
